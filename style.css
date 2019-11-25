@@ -236,7 +236,19 @@ html, body {
   background-color: rgba(0, 0, 0, 0.5);
   transition: .5s ease all;
 }
+
+main .image-wrap .image-scroll .art .genre {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1
+  transform: translate(-50%, -50%);
+  color:#fff
+}
+
+
 .main .image-wrap .image-scroll .art.a {
+
   background-image: url("https://dazedimg-dazedgroup.netdna-ssl.com/900/azure/dazed-prod/1210/6/1216840.jpg");
 }
 .main .image-wrap .image-scroll .art.b {
@@ -261,6 +273,16 @@ html, body {
   background-image: url("https://starloggers.files.wordpress.com/2019/03/neo-and-trinity.jpg");
 }
 
+p {
+  color:#fff;
+  position: absolute;
+  font-size: 1rem;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+
+}
 
 ul#social-buttons {
 	margin:0;
