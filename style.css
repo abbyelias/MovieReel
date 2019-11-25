@@ -1,13 +1,5 @@
 body {
-  font-family: "Raleway", sans-serif;
-}
-
-.container {
-  width: 80%;
-  margin: 2rem auto;
-}
-.container p {
-  margin: 1rem 0;
+  font-family: 
 }
 
 .hero {
@@ -201,8 +193,6 @@ html, body {
   border-bottom: 1px solid white;
 }
 .main .image-wrap .image-scroll {
-  /*position: absolute;
-  justify-content: space-evenly;*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -237,15 +227,6 @@ html, body {
   transition: .5s ease all;
 }
 
-main .image-wrap .image-scroll .art .genre {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 1
-  transform: translate(-50%, -50%);
-  color:#fff
-}
-
 
 .main .image-wrap .image-scroll .art.a {
 
@@ -273,7 +254,7 @@ main .image-wrap .image-scroll .art .genre {
   background-image: url("https://starloggers.files.wordpress.com/2019/03/neo-and-trinity.jpg");
 }
 
-p {
+.main p {
   color:#fff;
   position: absolute;
   font-size: 1rem;
