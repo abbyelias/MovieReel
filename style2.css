@@ -1,0 +1,252 @@
+
+
+.main-header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 65px;
+  width: 100vw;
+  padding: 0 0;
+  color: black;
+  z-index: 1;
+  transition: 0.4s ease-out;
+}
+.main-header a {
+  text-decoration: none;
+  color: inherit;
+  text-transform: uppercase;
+}
+.main-header .nav-links {
+  display: flex;
+  list-style: none;
+}
+.main-header .nav-links .nav-link a {
+  margin: 0.2rem;
+  padding: 1rem 0.5rem;
+}
+
+}
+.main-header .menu-icon {
+  position: relative;
+  padding: 26px 10px;
+  cursor: pointer;
+  z-index: 1;
+  display: none;
+}
+.main-header .menu-icon__line {
+  display: block;
+  position: relative;
+  background: #000;
+  height: 2px;
+  width: 20px;
+  border-radius: 4px;
+}
+.main-header .menu-icon__line::before, .main-header .menu-icon__line::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+  background: #000;
+  
+}
+.main-header .menu-icon__line::before {
+  transform: translateY(-5px);
+}
+.main-header .menu-icon__line::after {
+  transform: translateY(5px);
+}
+.main-header .menu-btn {
+  display: none;
+}
+.main-header.scrolled {
+  height: 50px;
+  background: #ffebf750;
+  color: white;
+}
+.main-header.scrolled .menu-icon__line, .main-header.scrolled .menu-icon__line::before, .main-header.scrolled .menu-icon__line::after {
+  background: white;
+}
+
+@media screen and (max-width: 768px) {
+  .main-header .menu-icon {
+    display: block;
+  }
+  .main-header .menu-icon__line {
+    animation: closedMid 0.8s backwards;
+    animation-direction: reverse;
+  }
+  .main-header .menu-icon__line::before {
+    animation: closedTop 0.8s backwards;
+    animation-direction: reverse;
+  }
+  .main-header .menu-icon__line::after {
+    animation: closedBtm 0.8s backwards;
+    animation-direction: reverse;
+  }
+  .main-header .nav-links {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    font-size: 2rem;
+    color: #fff;
+    background: #272727;
+    transition: opacity 0.8s 0.5s, clip-path 1s 0.5s;
+    clip-path: circle(200px at top right);
+  }
+  .main-header .nav-links .nav-link {
+    opacity: 0;
+    transform: translateX(100%);
+    width: 100%;
+    text-align: center;
+  }
+  .main-header .nav-links .nav-link a {
+    display: block;
+    padding: 2rem 0;
+  }
+}
+
+body {
+	font-size: 100%;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  background:  white;
+  width: 100%;
+  height: 50%;
+  background-size: cover;
+  transition: 1s ease all;
+}
+.main:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.034);
+}
+.main .image-wrap {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 225px;
+  overflow: hidden;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+.main .image-wrap .image-scroll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.main .image-wrap .image-scroll .art {
+  cursor: pointer;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-right: 1px solid #fff;
+  height: 100%;
+  width: 333px;
+  display: block;
+  float: left;
+}
+.main .image-wrap .image-scroll .art:hover:before {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.main .image-wrap .image-scroll .art:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: .5s ease all;
+}
+
+
+.main .image-wrap .image-scroll .art.a {
+
+  background-image: url("https://dazedimg-dazedgroup.netdna-ssl.com/900/azure/dazed-prod/1210/6/1216840.jpg");
+}
+.main .image-wrap .image-scroll .art.b {
+  background-image: url("https://www.newstatesman.com/sites/default/files/styles/cropped_article_image/public/blogs_2016/02/ghost_in_the_shell.jpg?itok=ZyuJc4H0");
+}
+.main .image-wrap .image-scroll .art.c {
+  background-image: url("https://i.pinimg.com/originals/00/b9/cb/00b9cbf7100dcd130f96bb45a60930f7.jpg");
+}
+.main .image-wrap .image-scroll .art.d {
+  background-image: url("https://static1.squarespace.com/static/5615b175e4b0ecd479d26230/561e825de4b05b29ace311c8/568c53fa05f8e2af802964c1/1485800638477/?format=1500w");
+}
+.main .image-wrap .image-scroll .art.e {
+  background-image: url("https://www.dw.com/image/42154852_303.jpg");
+}
+.main .image-wrap .image-scroll .art.f {
+  background-image: url("https://www.newstatesman.com/sites/default/files/styles/cropped_article_image/public/blogs_2016/03/2016_10_film.jpg?itok=G1AaGQQR");
+}
+.main .image-wrap .image-scroll .art.g {
+  background-image: url("https://imgs.classicfm.com/images/25111?width=3259&crop=16_9&signature=WUFDZTE6xau3MxH6jztFxAxM51w=");
+}
+.main .image-wrap .image-scroll .art.h {
+  background-image: url("https://consequenceofsound.net/wp-content/uploads/2018/11/submarine.jpg?quality=80&w=807");
+}
+
+.main p {
+    color:#fff;
+    position: absolute;
+    font-size: 1rem;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+
+}
+
+
+ul#social-buttons {
+	margin:0;
+  padding:0;
+}
+#social-buttons li {
+  list-style-type:none;
+  position: relative;
+  align-items: center;
+  right: 0px;
+  bottom: 0px;
+  display:inline-block;
+	border: 0;
+	border-radius:50%;
+	width:6em;
+	height:0em;
+	padding:0;
+	margin:0;
+}
+#social-container {
+  position: absolute;
+  right: 0px;
+}
